@@ -1,0 +1,16 @@
+# 1. Instalar dependencias
+sudo apt install -y python3-picamera2 python3-opencv python3-gpiozero python3-lgpio python3-pip
+pip install -r requirements.txt
+
+# 2. Generar dataset (CSV con 3300+ muestras con ruido)
+python utils/generate_dataset.py
+
+# 3. Entrenar MLP y revisar métricas para el reporte
+python utils/train_model.py
+
+# 4. (Primera vez) Calibrar colores con la cámara NoIR
+python utils/calibrate_hsv.py --color rojo
+python utils/calibrate_hsv.py --color verde
+
+# 5. Correr el carro
+python main.py

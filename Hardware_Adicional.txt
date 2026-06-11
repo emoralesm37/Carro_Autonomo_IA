@@ -1,6 +1,7 @@
 Componente:
 Batería 6–12V separada para L298N
   porqué: Los motores consumen picos de corriente que hacen reiniciar el RPi si comparten la misma fuente 5V
+          L298N + motores NO pueden compartir el 5V del RPi → brownout. Necesitas batería 6–12V para VIN del L298N
 
 Divisor de voltaje R1=1kΩ, R2=2kΩ
   porqué: El pin ECHO del HC-SR04 emite 5V; el GPIO del RPi3 soporta solo 3.3V

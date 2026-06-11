@@ -1,0 +1,9 @@
+Componente:
+Batería 6–12V separada para L298N
+  porqué: Los motores consumen picos de corriente que hacen reiniciar el RPi si comparten la misma fuente 5V
+
+Divisor de voltaje R1=1kΩ, R2=2kΩ
+  porqué: El pin ECHO del HC-SR04 emite 5V; el GPIO del RPi3 soporta solo 3.3V
+
+3–4 LEDs IR 850nm + R=220Ω
+  porqué: Sin ellos la NoIR no tiene ventaja en interiores; son los que le dan la visión nocturna

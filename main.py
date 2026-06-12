@@ -98,7 +98,7 @@ def main() -> None:
         #    El carro se detiene completamente y espera que cambie.
         if semaforo == "rojo" or stop:
             hw.detener()
-            print("⛔ DETENIDO (semaforo/STOP)")
+            print(" DETENIDO (semaforo/STOP)")
             time.sleep(0.15)
             continue
 
@@ -110,7 +110,7 @@ def main() -> None:
             hw.retroceder(VELOCIDAD_BASE)
             time.sleep(TIEMPO_RETROCESO)
             hw.detener()
-            print("⚠️  EMERGENCIA retroceso")
+            print("  EMERGENCIA retroceso")
             time.sleep(0.2)
             continue
 
@@ -131,7 +131,7 @@ def main() -> None:
             izq_libre=izq_libre,
             der_libre=der_libre,
         )
-        print(f"🧠 {accion:12}  P:{[f'{p:.2f}' for p in probs]}")
+        print(f" {accion:12}  P:{[f'{p:.2f}' for p in probs]}")
 
         # ── 7. Ejecutar acción ────────────────────────────────
         if accion == "avanzar":

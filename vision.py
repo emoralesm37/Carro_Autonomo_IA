@@ -16,7 +16,7 @@ Capacidades:
   3. Detección señal STOP — octágono rojo por contorno
   4. Provisión de frames JPEG para el servidor de streaming
 
-⚠️  NOTA NoIR Camera:
+  NOTA NoIR Camera:
   Sin filtro IR, los rangos HSV pueden diferir bajo luz artificial
   o LEDs IR. Calibrar antes del primer uso:
     python utils/calibrate_hsv.py --color rojo

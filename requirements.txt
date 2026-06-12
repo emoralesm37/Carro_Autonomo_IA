@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+# Dependencias — Carro Autónomo
+# Raspberry Pi 3 Modelo B — Raspberry Pi OS Bookworm
+# ─────────────────────────────────────────────────────────────
+#
+# PASO 1 — Instalar paquetes del sistema (apt):
+#   sudo apt update
+#   sudo apt install -y \
+#     python3-picamera2 \
+#     python3-opencv    \
+#     python3-gpiozero  \
+#     python3-lgpio     \
+#     python3-pip
+#
+# PASO 2 — Instalar paquetes Python (pip):
+#   pip install -r requirements.txt
+#
+# PASO 3 — Habilitar cámara (una sola vez):
+#   sudo raspi-config → Interface Options → Camera → Enable
+#   (o agregar camera_auto_detect=1 en /boot/firmware/config.txt)
+#
+# PASO 4 — Hardware PWM para motores (opcional, mejora suavidad):
+#   Agregar en /boot/firmware/config.txt:
+#     dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
+#   Luego reiniciar.
+#
+# ─────────────────────────────────────────────────────────────
+
+flask>=3.0.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Nota: picamera2, opencv, gpiozero y lgpio se instalan via apt (paso 1).
+# instalar picamera2 via pip en un entorno virtual:
+#   pip install picamera2
+# En Bookworm el paquete apt ya incluye todas las dependencias de
+# libcamera necesarias, por lo que se recomienda apt sobre pip.

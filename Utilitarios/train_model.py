@@ -114,7 +114,7 @@ def main() -> None:
     joblib.dump(scaler, SCALER_PATH)
     print(f"[SAVE]  Modelo  guardado → {MODELO_PATH}")
     print(f"[SAVE]  Scaler  guardado → {SCALER_PATH}")
-    print(f"\n Listo. Copia el proyecto al Raspberry Pi y ejecuta main.py")
+    print(f"\n Listo")
 
 
 if __name__ == "__main__":

@@ -21,7 +21,7 @@ PIN_M_DER_ENB = 13      # Enable / PWM velocidad  ← hardware PWM
 #   dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
 
 # HC-SR04 — Sensor ultrasónico
-# ⚠️ ADVERTENCIA ELÉCTRICA: ECHO emite 5 V pero el GPIO del RPi3
+#  ADVERTENCIA ELÉCTRICA: ECHO emite 5 V pero el GPIO del RPi3
 #   soporta solo 3.3 V. Usa un divisor de voltaje antes del pin ECHO:
 #     ECHO (HC-SR04) → R1=1 kΩ → nodo → GPIO 24
 #                                nodo → R2=2 kΩ → GND
@@ -66,7 +66,7 @@ ROI_CARRIL_INICIO  = 0.55   # Fracción vertical donde empieza ROI de carril
 # ─────────────────────────────────────────────────────────────
 # VISIÓN — RANGOS HSV
 # ─────────────────────────────────────────────────────────────
-# ⚠️  NOTA NoIR: la cámara sin filtro IR puede alterar los tonos
+#   NOTA NoIR: la cámara sin filtro IR puede alterar los tonos
 #     bajo iluminación artificial o IR. Si los valores no funcionan,
 #     calibra con:  python utils/calibrate_hsv.py --color rojo
 #                   python utils/calibrate_hsv.py --color verde
